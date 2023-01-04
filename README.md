@@ -27,6 +27,12 @@ npm start
     * `page`  - returns data set for specific page
   - /PATCH `/api/todo/:id`. *marks specific item as DONE*
   - /DELETE `/api/todo/:id`. *deletes the item. (NOTE: used as a soft deletion, item marks as deleted)* 
+  
+## Tests
+To run tests:
+``` sh
+npm test
+```
 
 ## Protobuf support
 Available protobuf shemas: [here](proto/todo.proto)
