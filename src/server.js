@@ -6,7 +6,12 @@ const app = require("./app");
 const PORT = process.env.PORT || 3000;
 
 async function strat() {
-  await connectDb();
+  try {
+    await connectDb();
+  } catch (error) {
+    console.error(`Error:`, error.message);
+    process.exit(1);
+  }
   app.listen(PORT, () => console.log(`Server listening on port [${PORT}]`));
 }
 
